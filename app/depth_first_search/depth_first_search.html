@@ -1,0 +1,30 @@
+<div layout="column">
+    <div layout="row" layout-margin layout-wrap>
+        <div>
+            <md-input-container>
+                <label for="input-tree">Valores da Árvore</label>
+                <input type="text" id="input-tree" placeholder="Valores da Árvore" ng-model="array">
+            </md-input-container>
+        </div>
+        <div>
+            <md-button class="md-raised md-primary" ng-click="create_binary_tree($event)">Criar Árvore</md-button>
+        </div>
+        <div>
+            <md-input-container>
+                <label for="input-search">Valor a Pesquisar</label>
+                <input type="text" id="input-search" placeholder="Valor a Pesquisar" ng-model="value">
+            </md-input-container>
+        </div>
+        <div>
+            <md-button class="md-raised md-primary" ng-click="find_in_tree($event)">Procurar na Árvore</md-button>
+        </div>
+    </div>
+    <div layout="row" layout-margin layout-wrap>
+
+    </div>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div layout="row" layout-align="center center" layout-margin layout-wrap>
+            <div id="binary-tree"></div>
+        </div>
+    </md-content>
+</div>

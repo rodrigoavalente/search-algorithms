@@ -1,0 +1,22 @@
+<div layout="column">
+    <div layout="row" layout-margin layout-wrap>
+        <div>
+            <md-input-container>
+                <label for="input-card">Carta a se Procurar</label>
+                <input type="text" id="input-card" placeholder="Carta a se Procurar" ng-model="card">
+            </md-input-container>
+        </div>
+        <div>
+            <md-button class="md-raised md-primary" ng-click="findCard($event)">Procurar</md-button>
+        </div>
+    </div>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div layout="row" layout-align="center center" layout-margin layout-wrap>
+            <div class="flex" flex="25" ng-repeat="card in cards">
+                <md-card flex="30" ng-class="card.selected">
+                    <img ng-src="{{ card.image }}" style="max-height: 150px; max-width: 150px; height: auto; width: auto;">
+                </md-card>
+            </div>
+        </div>
+    </md-content>
+</div>

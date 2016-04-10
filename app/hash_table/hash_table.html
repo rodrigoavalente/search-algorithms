@@ -1,0 +1,42 @@
+<div layout="column">
+    <div layout="row" layout-margin layout-wrap>
+        <div>
+            <md-input-container>
+                <label for="input-name">Nome do Contato</label>
+                <input type="text" id="input-name" placeholder="Nome do Contato" ng-model="name">
+            </md-input-container>
+            <md-input-container>
+                <label for="input-about">Sobre</label>
+                <input type="text" id="input-about" placeholder="Sobre" ng-model="about">
+            </md-input-container>
+        </div>
+        <div>
+            <md-button class="md-raised md-primary" ng-click="add_contact($event)">Adicionar/Procurar</md-button>
+        </div>
+    </div>
+    <md-content>
+        <md-table-container>
+            <md-card>
+                <md-toolbar class="md-table-toolbar md-default">
+                    <div class="md-toolbar-tools">
+                        <span>Contatos</span>
+                    </div>
+                </md-toolbar>
+                <table md-table md-order-by="query.name">
+                    <thead md-head>
+                    <tr md-row>
+                        <th md-column>Nome</th>
+                        <th md-column>Sobre</th>
+                    </tr>
+                    </thead>
+                    <tbody md-body>
+                    <tr md-row ng-repeat="contact in contacts track by $index" ng-class="contact.class">
+                        <td md-cell>{{ contact.name }}</td>
+                        <td md-cell>{{ contact.about }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </md-card>
+        </md-table-container>
+    </md-content>
+</div>
