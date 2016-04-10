@@ -78,7 +78,7 @@
                                 return $ocLazyLoad.load({
                                     name: 'search-algorithms',
                                     files: [
-                                        '.binary_search/binary_search.js'
+                                        './binary_search/binary_search.js'
                                     ]
                                 })
                             }
