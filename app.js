@@ -29,7 +29,7 @@
                                 return $ocLazyLoad.load({
                                     name: 'search-algorithms',
                                     files: [
-                                        '/scripts/controllers/tabs.js'
+                                        './scripts/controllers/tabs.js'
                                     ]
                                 });
                             }
